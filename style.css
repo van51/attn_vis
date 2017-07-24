@@ -1,0 +1,29 @@
+html, body {
+		    height: 100%;
+			    width: 100%;
+				    position: relative;
+					    margin: 0;
+						    padding: 0;
+					}
+					#frameContainer {
+							    position: fixed;
+								    height: 100%;
+									    top:0px;
+										    left: 320px;
+											    right:0px;
+												    bottom:0px;
+													    z-index:1;
+												}
+												#main_iframe{
+														    height: 100%;
+															    width: 100%;
+														}
+														nav {position:fixed; 
+																    left:0px; 
+																	    top:0px; 
+																		    bottom:0px; 
+																			    width:320px; 
+																				    background:#99ffcc; 
+																					    color:#fff; 
+																						    z-index:2
+																					}
