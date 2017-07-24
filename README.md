@@ -4,13 +4,20 @@ This is a tool to visualize the distribution of attention in a text-based sequen
 
 Additionally, for pointer-generator networks such as that described in [this paper](https://arxiv.org/abs/1704.04368), the tool displays the _generation probability_ of each decoded word. This tool was designed to work with the [Tensorflow code](https://github.com/abisee/pointer-generator) for the paper.
 
+## Prerequisites
+```bash
+$ virtualenv env
+$ source env/bin/activate
+$ pip install tornado
+```
+
 ## To run
 
 To run the visualizer, run
 ```
-python -m SimpleHTTPServer
+python index.py
 ```
-from this directory then navigate to `http://localhost:8000/` in browser. The visualizer will show some example data.
+from this directory then navigate to `http://localhost:8000/` in browser. The visualizer will display a list of files found in this directory ending in '.json'. They should adhere to the following format.
 
 ## To use your own data
 
@@ -27,3 +34,7 @@ To visualize your own data, you need to replace `attn_vis_data.json` with a simi
 
 
 WARNING: Make sure that none of the strings in `article_lst`, `decoded_lst`, or `abstract_str` contain `<angled brackets>`. These will interfere with the HTML and can result in text not being displayed.
+
+## Disclaimer 
+This is a fork from https://github.com/abisee/attn_vis .
+No copyright is intended.

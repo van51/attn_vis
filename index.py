@@ -35,7 +35,6 @@ class Application(tornado.web.Application):
             "template_path": os.path.dirname(os.path.abspath(__file__)),
             "static_path": os.path.dirname(os.path.abspath(__file__)),
         }
-        print str(settings)
         tornado.web.Application.__init__(self, handlers, **settings)
 
 def make_app():
